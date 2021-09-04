@@ -37,11 +37,11 @@
     camera-orbit="265.3deg 56.1deg auto"
     interaction-prompt="none"
     camera-controls
-    ar-scale:"fixed"
+    ar-scale="fixed"
     ar-modes="webxr scene-viewer quick-look"
     ar>
 
-      <button id="display" class="Hotspot" slot="hotspot-1" data-position="-0.026475703867189494m 0.11740126003645392m 0.04554762273212867m" data-normal="-0.2830956890814263m 0.9587674660493735m 0.02493545405193437m"
+      <button id="airoutlet" class="Hotspot" slot="hotspot-1" data-position="-0.026475703867189494m 0.11740126003645392m 0.04554762273212867m" data-normal="-0.2830956890814263m 0.9587674660493735m 0.02493545405193437m"
         data-visibility-attribute="visible">
       </button>
 
@@ -97,13 +97,13 @@
       // Get the <span> element that closes the modal
       var span = document.getElementsByClassName("close")[0];
 
-      var btn1 = document.getElementById("display");
+      var btn1 = document.getElementById("airoutlet");
       // When the user clicks on the button, open the modal
       btn1.onclick = function() {
         modal.style.display = "block";
         console.log("Hello world!");
         document.getElementById("demo").innerHTML = "Fix the mask to the air outlet of the device";
-        document.getElementById('refimg').src = 'https://cdn.glitch.com/f8476693-7ca0-460c-878f-d0a15a51e84e%2F1.jpg?v=1629884249856'
+        document.getElementById('refimg').src = "assets/3a.jpg"
       }
 
       var btn2 = document.getElementById("Spo2");
@@ -112,7 +112,7 @@
         modal.style.display = "block";
         console.log("Hello world!");
         document.getElementById("demo").innerHTML = "Connect the SpO2 kit to the device to identify the SpO2 and pulse rate";
-        document.getElementById('refimg').src = 'https://cdn.glitch.com/f8476693-7ca0-460c-878f-d0a15a51e84e%2F3.jpg?v=1629885614617'
+        document.getElementById('refimg').src = "assets/6.jpg"
       }
 
       var btn3 = document.getElementById("CoverButton");
@@ -121,8 +121,8 @@
         modal.style.display = "block";
         console.log("Hello world!");
         document.getElementById("demo").innerHTML = "Button to open Heated Humidifier H60 <br> Pull the water chamber out to fill the water";
-        document.getElementById('refimg').src = 'https://cdn.glitch.com/b9569037-4133-438e-a41f-85635c4b854d%2F4.jpg?v=1630727746692'
-      }
+        document.getElementById('refimg').src = "assets/4.jpg"
+        }
 
       var btn4 = document.getElementById("maindisplay");
       // When the user clicks on the button, open the modal
@@ -130,8 +130,8 @@
         modal.style.display = "block";
         console.log("Hello world!");
         document.getElementById("demo").innerHTML = "Large 3.5 inch colour screen to view the real time reports";
-        document.getElementById('refimg').src = 'https://cdn.glitch.com/b9569037-4133-438e-a41f-85635c4b854d%2F1.jpg?v=1630728047315'
-      }
+        document.getElementById('refimg').src = "assets/1.jpg"
+        }
 
       var btn5 = document.getElementById("Knob");
       // When the user clicks on the button, open the modal
@@ -139,8 +139,8 @@
         modal.style.display = "block";
         console.log("Hello world!");
         document.getElementById("demo").innerHTML = "Air blowing Knob";
-        document.getElementById('refimg').src = 'https://cdn.glitch.com/b9569037-4133-438e-a41f-85635c4b854d%2F2.jpg?v=1630728147918'
-      }
+        document.getElementById('refimg').src = "assets/2.jpg"
+        }
 
       var btn6 = document.getElementById("chargingport");
       // When the user clicks on the button, open the modal
@@ -148,8 +148,8 @@
         modal.style.display = "block";
         console.log("Hello world!");
         document.getElementById("demo").innerHTML = "Power Supply";
-        document.getElementById('refimg').src = 'https://cdn.glitch.com/b9569037-4133-438e-a41f-85635c4b854d%2F5.jpg?v=1630728341497';
-      }
+        document.getElementById('refimg').src ="assets/5.jpg"
+            }
       // When the user clicks on <span> (x), close the modal
       span.onclick = function() {
 
