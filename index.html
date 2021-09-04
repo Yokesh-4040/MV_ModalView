@@ -29,50 +29,55 @@
 <body>
   <div id="card">
     <!-- All you need to put beautiful, interactive 3D content on your site: -->
-    <model-viewer
-    id="resp-machine"
-    src="https://cdn.glitch.com/f8476693-7ca0-460c-878f-d0a15a51e84e%2FBipap%20Machine.glb?v=1630553501031"
-    poster="https://cdn.glitch.com/5bb0e278-6150-45fe-9954-e098da86900c%2Fposter%20(3).png?v=1627880993812"
-    shadow-intensity="1"
-    camera-orbit="265.3deg 56.1deg auto"
-    interaction-prompt="none"
-    camera-controls
-    ar-scale="fixed"
-    ar-modes="webxr scene-viewer quick-look"
-    ar>
+    <model-viewer id="resp-machine"
+      src="https://cdn.glitch.com/f8476693-7ca0-460c-878f-d0a15a51e84e%2FBipap%20Machine.glb?v=1630553501031"
+      poster="https://cdn.glitch.com/5bb0e278-6150-45fe-9954-e098da86900c%2Fposter%20(3).png?v=1627880993812"
+      shadow-intensity="1" camera-orbit="265.3deg 56.1deg auto" interaction-prompt="none" camera-controls
+      ar-scale="fixed" ar-modes="webxr scene-viewer quick-look" ar>
 
-      <button id="airoutlet" class="Hotspot" slot="hotspot-1" data-position="-0.026475703867189494m 0.11740126003645392m 0.04554762273212867m" data-normal="-0.2830956890814263m 0.9587674660493735m 0.02493545405193437m"
+      <button id="airoutlet" class="Hotspot" slot="hotspot-1"
+        data-position="-0.026475703867189494m 0.11740126003645392m 0.04554762273212867m"
+        data-normal="-0.2830956890814263m 0.9587674660493735m 0.02493545405193437m" 
         data-visibility-attribute="visible">
       </button>
 
-      <button id="Spo2" class="Hotspot" slot="hotspot-2" data-position="0.10608191716481974m 0.05609980538873837m -0.11082536555110319m" data-normal="1m 0m 0m" data-visibility-attribute="visible">
-      </button>
-
-      <button id="CoverButton" class="Hotspot" slot="hotspot-4" data-position="-0.0952070157668225m 0.014505728927540304m 0.04231140590974629m" data-normal="-0.9999999998920049m 0.000014347924949242678m -0.0000031823328397464247m"
+      <button id="Spo2" class="Hotspot" slot="hotspot-2"
+        data-position="0.10608191716481974m 0.05609980538873837m -0.11082536555110319m" 
+        data-normal="1m 0m 0m"
         data-visibility-attribute="visible">
       </button>
 
-      <button id="maindisplay" class="Hotspot" slot="hotspot-5" data-position="0.017879875224160256m 0.12100167183634784m -0.08656689001641463m" data-normal="-1.476758384488443e-7m 0.9999999999999801m 1.3435885411819354e-7m"
+      <button id="CoverButton" class="Hotspot" slot="hotspot-4"
+        data-position="-0.0952070157668225m 0.014505728927540304m 0.04231140590974629m"
+        data-normal="-0.9999999998920049m 0.000014347924949242678m -0.0000031823328397464247m"
         data-visibility-attribute="visible">
       </button>
 
-      <button id="Knob" class="Hotspot" slot="hotspot-6" data-position="-0.037497711507743864m 0.12656444894586893m -0.12265188580773785m" data-normal="4.198266068506664e-8m 0.9999999999999961m 7.840754102297808e-8m"
+      <button id="maindisplay" class="Hotspot" slot="hotspot-5"
+        data-position="0.017879875224160256m 0.12100167183634784m -0.08656689001641463m"
+        data-normal="-1.476758384488443e-7m 0.9999999999999801m 1.3435885411819354e-7m"
+        data-visibility-attribute="visible">
+      </button>
+
+      <button id="Knob" class="Hotspot" slot="hotspot-6"
+        data-position="-0.037497711507743864m 0.12656444894586893m -0.12265188580773785m"
+        data-normal="4.198266068506664e-8m 0.9999999999999961m 7.840754102297808e-8m"
         data-visibility-attribute="visible">
       </button>
 
 
-      <button id="chargingport" class="Hotspot" slot="hotspot-7" data-position="0.0648496775050964m 0.09800774142356423m -0.17815773959729106m" data-normal="0.9994459462763247m -0.03328363669638395m -2.91924372140995e-7m"
+      <button id="chargingport" class="Hotspot" slot="hotspot-7"
+        data-position="0.0648496775050964m 0.09800774142356423m -0.17815773959729106m"
+        data-normal="0.9994459462763247m -0.03328363669638395m -2.91924372140995e-7m"
         data-visibility-attribute="visible">
       </button>
 
-      <!-- Trigger/Open The Modal -->
-
-      <!-- The Modal -->
       <div id="myModal" class="modal">
-        <!-- Modal content -->
+       
         <div class="modal-content">
           <span class="close">&times;</span>
-          <img id="refimg" src="https://cdn.glitch.com/f8476693-7ca0-460c-878f-d0a15a51e84e%2F1.jpg?v=1629884249856" width="100%" height=auto alt="Italian Trulli">
+          <img id="refimg" src=""
+            width="100%" height=auto alt="">
           <p id="demo">Some text in the Modal..</p>
         </div>
 
@@ -81,25 +86,17 @@
 
 
     <script>
-      function changetext() {
-        console.log('testing');
-        document.getElementById("demo").innerHTML = "Paragraph changed!";
-
-      }
 
 
       // Get the modal
       var modal = document.getElementById("myModal");
-
-      // Get the button that opens the modal
-
-
+      
       // Get the <span> element that closes the modal
       var span = document.getElementsByClassName("close")[0];
 
       var btn1 = document.getElementById("airoutlet");
       // When the user clicks on the button, open the modal
-      btn1.onclick = function() {
+      btn1.onclick = function () {
         modal.style.display = "block";
         console.log("Hello world!");
         document.getElementById("demo").innerHTML = "Fix the mask to the air outlet of the device";
@@ -108,7 +105,7 @@
 
       var btn2 = document.getElementById("Spo2");
       // When the user clicks on the button, open the modal
-      btn2.onclick = function() {
+      btn2.onclick = function () {
         modal.style.display = "block";
         console.log("Hello world!");
         document.getElementById("demo").innerHTML = "Connect the SpO2 kit to the device to identify the SpO2 and pulse rate";
@@ -117,41 +114,41 @@
 
       var btn3 = document.getElementById("CoverButton");
       // When the user clicks on the button, open the modal
-      btn3.onclick = function() {
+      btn3.onclick = function () {
         modal.style.display = "block";
         console.log("Hello world!");
         document.getElementById("demo").innerHTML = "Button to open Heated Humidifier H60 <br> Pull the water chamber out to fill the water";
         document.getElementById('refimg').src = "assets/4.jpg"
-        }
+      }
 
       var btn4 = document.getElementById("maindisplay");
       // When the user clicks on the button, open the modal
-      btn4.onclick = function() {
+      btn4.onclick = function () {
         modal.style.display = "block";
         console.log("Hello world!");
         document.getElementById("demo").innerHTML = "Large 3.5 inch colour screen to view the real time reports";
         document.getElementById('refimg').src = "assets/1.jpg"
-        }
+      }
 
       var btn5 = document.getElementById("Knob");
       // When the user clicks on the button, open the modal
-      btn5.onclick = function() {
+      btn5.onclick = function () {
         modal.style.display = "block";
         console.log("Hello world!");
         document.getElementById("demo").innerHTML = "Air blowing Knob";
         document.getElementById('refimg').src = "assets/2.jpg"
-        }
+      }
 
       var btn6 = document.getElementById("chargingport");
       // When the user clicks on the button, open the modal
-      btn6.onclick = function() {
+      btn6.onclick = function () {
         modal.style.display = "block";
         console.log("Hello world!");
         document.getElementById("demo").innerHTML = "Power Supply";
-        document.getElementById('refimg').src ="assets/5.jpg"
-            }
+        document.getElementById('refimg').src = "assets/5.jpg"
+      }
       // When the user clicks on <span> (x), close the modal
-      span.onclick = function() {
+      span.onclick = function () {
 
         modal.style.display = "none";
 
@@ -159,7 +156,7 @@
       }
 
       // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
+      window.onclick = function (event) {
         if (event.target == modal) {
           modal.style.display = "none";
         }
